@@ -1,0 +1,83 @@
+name: RGB Christmas Lights
+products:
+  - id: eyj9bhggzm50emfd
+    manufacturer: LSC Smart Connect
+    model: RGB Christmas Lights
+entities:
+  - entity: light
+    icon: "mdi:string-lights"
+    dps:
+      - id: 20
+        type: boolean
+        name: switch
+      - id: 102
+        type: string
+        name: effect
+        optional: true
+        mapping:
+          - dps_val: Bright
+            value: Bright
+          - dps_val: Gradually
+            value: Fade
+          - dps_val: Star
+            value: Star
+          - dps_val: Flower
+            value: Flower
+          - dps_val: Marquee
+            value: Marquee
+          - dps_val: Fireworks
+            value: Fireworks
+          - dps_val: Meteor
+            value: Meteor
+          - dps_val: Stream
+            value: Stream
+  - entity: select
+    translation_key: scene
+    category: config
+    dps:
+      - id: 102
+        type: string
+        name: option
+        optional: true
+        mapping:
+          - dps_val: Bright
+            value: Bright
+          - dps_val: Gradually
+            value: Fade
+          - dps_val: Star
+            value: Star
+          - dps_val: Flower
+            value: Flower
+          - dps_val: Marquee
+            value: Marquee
+          - dps_val: Fireworks
+            value: Fireworks
+          - dps_val: Meteor
+            value: Meteor
+          - dps_val: Stream
+            value: Stream
+  - entity: select
+    name: Kleur
+    category: config
+    dps:
+      - id: 101
+        type: string
+        name: option
+        optional: true
+        mapping:
+          - dps_val: R
+            value: Red
+          - dps_val: RG
+            value: Yellow
+          - dps_val: G
+            value: Green
+          - dps_val: GB
+            value: Light Blue
+          - dps_val: B
+            value: Blue
+          - dps_val: RB
+            value: Purple
+          - dps_val: RGB
+            value: White
+          - dps_val: Color
+            value: Rainbow
